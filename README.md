@@ -55,14 +55,12 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#tips">Tips</a></li>
   </ol>
 </details>
 
@@ -73,9 +71,6 @@
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- CONTRIBUTING -->
 
@@ -92,31 +87,32 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- LICENSE -->
 
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- CONTACT -->
 
 ## Contact
 
-Your Name - [@itsdandi__](https://threads.net/@itsdandi__) - email@dandisatrio810.com
+Your Name - [@itsdandi\_\_](https://threads.net/@itsdandi__) - email@dandisatrio810.com
 
 Project Link: [https://github.com/dandisatrio/simrskhanza-modify](https://github.com/dandisatrio/simrskhanza-modify)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
 
 - [SIMRS Khanza](https://github.com/mas-elkhanza/SIMRS-Khanza)
+
+<!-- TIPS -->
+
+## Tips
+
+- [How to assign more memory to Netbeans 1](https://stackoverflow.com/questions/18992219/how-to-assign-more-memory-to-netbeans)
+- [How to assign more memory to Netbeans 2 Videos](https://www.youtube.com/watch?v=3jVSlQl9sj4&ab_channel=SalimMulyana)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
