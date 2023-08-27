@@ -118,7 +118,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Your Name - [@itsdandi__](https://threads.net/@itsdandi__) - email@dandisatrio810.com
 
 Project Link: [https://github.com/dandisatrio/simrskhanza-modify](https://github.com/dandisatrio/simrskhanza-modify)
 
@@ -128,9 +128,7 @@ Project Link: [https://github.com/dandisatrio/simrskhanza-modify](https://github
 
 ## Acknowledgments
 
-- []()
-- []()
-- []()
+- [SIMRS Khanza](https://github.com/mas-elkhanza/SIMRS-Khanza)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
