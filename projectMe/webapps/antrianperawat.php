@@ -87,21 +87,21 @@
     </table>
     <table border='0' witdh='100%' cellpadding='0' cellspacing='0'>
         <tr class='head2' border='0'>
-            <td width='35%' align='center'><font size='6' color='#DD0000'><b>Panggilan Poli (Dokter)</b></font></td><td><font size='6' color='#DD0000'><b>:</b></font></td>
+            <td width='35%' align='center'><font size='6' color='#DD0000'><b>Panggilan Poli (Perawat)</b></font></td><td><font size='6' color='#DD0000'><b>:</b></font></td>
             <td width='64%' align='center'>
             <?php 
-            //  $_sql="select * from antripoli where antripoli.kd_poli='".$kd_poli."' and antripoli.kd_dokter='".$kd_dokter."'" ;  
-                $_sql="select antripoli.kd_dokter,antripoli.kd_poli,antripoli.status,antripoli.no_rawat,pasien.nm_pasien,poliklinik.nm_poli,dokter.nm_dokter,reg_periksa.no_reg from antripoli inner join reg_periksa inner join pasien inner join
-                poliklinik inner join dokter on antripoli.kd_poli=reg_periksa.kd_poli and reg_periksa.kd_dokter=antripoli.kd_dokter and reg_periksa.no_rkm_medis=pasien.no_rkm_medis and antripoli.kd_poli=poliklinik.kd_poli and dokter.kd_dokter=antripoli.kd_dokter where antripoli.kd_poli='".$kd_poli."' and antripoli.kd_dokter='".$kd_dokter."'" ;  
+            //  $_sql="select * from antripoli_perawat where antripoli_perawat.kd_poli='".$kd_poli."' and antripoli_perawat.kd_dokter='".$kd_dokter."'" ;  
+                $_sql="select antripoli_perawat.kd_dokter,antripoli_perawat.kd_poli,antripoli_perawat.status,antripoli_perawat.no_rawat,pasien.nm_pasien,poliklinik.nm_poli,dokter.nm_dokter,reg_periksa.no_reg from antripoli_perawat inner join reg_periksa inner join pasien inner join
+                poliklinik inner join dokter on antripoli_perawat.kd_poli=reg_periksa.kd_poli and reg_periksa.kd_dokter=antripoli_perawat.kd_dokter and reg_periksa.no_rkm_medis=pasien.no_rkm_medis and antripoli_perawat.kd_poli=poliklinik.kd_poli and dokter.kd_dokter=antripoli_perawat.kd_dokter where antripoli_perawat.kd_poli='".$kd_poli."' and antripoli_perawat.kd_dokter='".$kd_dokter."'" ;  
                 $hasil=bukaquery($_sql);
                 while ($data = mysqli_fetch_array ($hasil)){
-                    // echo "<font size='6' color='#DD0000'><b>".getOne("select concat(reg_periksa.no_reg,' ',reg_periksa.no_rawat,' ',pasien.nm_pasien) from reg_periksa inner join pasien inner join antripoli on reg_periksa.no_rkm_medis=pasien.no_rkm_medis where antripoli.no_rawat='".$data['no_rawat']."'")."</b></font>";
+                    // echo "<font size='6' color='#DD0000'><b>".getOne("select concat(reg_periksa.no_reg,' ',reg_periksa.no_rawat,' ',pasien.nm_pasien) from reg_periksa inner join pasien inner join antripoli_perawat on reg_periksa.no_rkm_medis=pasien.no_rkm_medis where antripoli_perawat.no_rawat='".$data['no_rawat']."'")."</b></font>";
                     if($data['status']=="1"){
                     //  echo "<audio autoplay='true' src='bell.wav'>"; 
                         ?>
                         <script type="text/javascript">
                         responsiveVoice.speak(
-                        "Antrian <?= strtolower($data['no_reg']);?>,Atas nama <?= strtolower($data['nm_pasien']);?>,Silahkan ke <?= strtolower($data['nm_poli']);?>,<?= strtolower($data['nm_dokter']);?>, ",
+                        "Antrian <?= strtolower($data['no_reg']);?>,Atas nama <?= strtolower($data['nm_pasien']);?>,Silahkan ke Perawat <?= strtolower($data['nm_poli']);?>, ",
                         "Indonesian Female",
                         {
                         pitch: 1, 
@@ -110,7 +110,7 @@
                         }
                         );</script>
                         <?php
-                        bukaquery2("update antripoli set antripoli.status='0' where antripoli.kd_poli='".$kd_poli."' and antripoli.kd_dokter='".$kd_dokter."'");
+                        bukaquery2("update antripoli_perawat set antripoli_perawat.status='0' where antripoli_perawat.kd_poli='".$kd_poli."' and antripoli_perawat.kd_dokter='".$kd_dokter."'");
                     }   
                 }
             ?>
@@ -148,5 +148,5 @@
      <img src="ft-2.jpg" alt="bar-pic" width="100%" height="83">
 </body>
 <?php 
-  echo "<meta http-equiv='refresh' content='25;URL=?iyem=".encrypt_decrypt("{\"kd_poli\":\"".$kd_poli."\",\"kd_dokter\":\"".$kd_dokter."\"}","e")."'>";
+  echo "<meta http-equiv='refresh' content='15;URL=?iyem=".encrypt_decrypt("{\"kd_poli\":\"".$kd_poli."\",\"kd_dokter\":\"".$kd_dokter."\"}","e")."'>";
 ?>
